@@ -1,5 +1,5 @@
 ﻿using Graphs;
-using Graphs.LeastSquare;
+using Graphs.LeastSquares;
 using Graphs.Lines;
 
 namespace MetodeTest
@@ -25,32 +25,29 @@ namespace MetodeTest
 
             LinearLine line = LinearRegression(points);
 
-            Console.WriteLine(line);
+            Console.WriteLine($"Den bedste linje til at repræsentere disse punkter, er derfor: {line}");
         }
 
         public static LinearLine LinearRegression(Point2D[] points)
         {
-            Console.WriteLine("Fra forskriften 'ax + b - y':");
-
             LeastSquaresArea area = new();
             for (int i = 0; i < points.Length; i++)
             {
                 area += points[i];
             }
 
-            Console.WriteLine($"Arealet af alle kvadrater: {area}");
-
             LeastSquaresDerivative derivForA = area.GetLeastSquaresDerivativeForA();
             LeastSquaresDerivative derivForB = area.GetLeastSquaresDerivativeForB();
-
-            Console.WriteLine($"Differentieret med hensyn til a: {derivForA}");
-            Console.WriteLine($"Differentieret med hensyn til b: {derivForB}");
 
             double a = derivForA.FindA(derivForB);
             double b = derivForA.FindB(derivForB);
 
-            Console.WriteLine($"Dermed er a: {derivForA.FindA(derivForB)}");
-            Console.WriteLine($"og resultatet for b er: {derivForA.FindB(derivForB)}");
+            Console.WriteLine($"Alle punkter er en bestemt distance fra linjen. Disse distance bliver kvadreret.");
+            Console.WriteLine($"Summen af disse kvadrater udtrykkes som: {area}");
+            Console.WriteLine($"Differentieret med hensyn til a: {derivForA}");
+            Console.WriteLine($"Differentieret med hensyn til b: {derivForB}");
+            Console.WriteLine($"a = {a}");
+            Console.WriteLine($"b = {b}");
 
             LinearLine line = new(a, b);
             return line;

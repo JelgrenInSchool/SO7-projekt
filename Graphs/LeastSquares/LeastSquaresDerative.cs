@@ -1,4 +1,4 @@
-﻿namespace Graphs.LeastSquare
+﻿namespace Graphs.LeastSquares
 {
     public class LeastSquaresDerivative
     {

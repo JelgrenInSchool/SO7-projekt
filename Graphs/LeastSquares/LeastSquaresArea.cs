@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Graphs.LeastSquare
+namespace Graphs.LeastSquares
 {
     public class LeastSquaresArea
     {
