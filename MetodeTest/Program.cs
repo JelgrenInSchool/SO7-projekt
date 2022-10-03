@@ -32,36 +32,11 @@ namespace MetodeTest
         {
             Console.WriteLine("Fra forskriften 'ax + b - y':");
 
-            double xSquaredSum = 0;
-            double ySquaredSum = 0;
-            double xDoubleSum = 0;
-            double yNegDoubleSum = 0;
-            double xySum = 0;
-
-            int i = 0;
-            for (; i < points.Length; i++)
+            LeastSquaresArea area = new();
+            for (int i = 0; i < points.Length; i++)
             {
-                double xSquared = points[i].X * points[i].X;
-                xSquaredSum += xSquared;
-
-                double ySquared = points[i].Y * points[i].Y;
-                ySquaredSum += ySquared;
-
-                double xDouble = 2 * points[i].X;
-                xDoubleSum += xDouble;
-
-                double yNegDouble = 2 * -points[i].Y;
-                yNegDoubleSum += yNegDouble;
-
-                double xy = 2 * points[i].X * -points[i].Y;
-                xySum += xy;
-
-                string distance = $"{xSquared}a^2 + ({xDouble}ab) + ({xy}a) + b^2 + ({yNegDouble}b) + {ySquared}";
-
-                Console.WriteLine($"Distance fra linje til punkt {i + 1}: {distance}");
+                area += points[i];
             }
-
-            LeastSquaresArea area = new(xDoubleSum, xSquaredSum, i, xySum, yNegDoubleSum, ySquaredSum);
 
             Console.WriteLine($"Arealet af alle kvadrater: {area}");
 

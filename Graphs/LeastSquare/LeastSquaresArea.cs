@@ -50,7 +50,7 @@ namespace Graphs.LeastSquare
                 aSquared = p.X * p.X,
                 bSquared = 1,
                 aCount = 2 * p.X * -p.Y,
-                bCount = 2 * p.Y,
+                bCount = 2 * -p.Y,
                 abCount = 2 * p.X,
                 constant = p.Y * p.Y
             };
