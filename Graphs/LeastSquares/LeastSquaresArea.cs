@@ -17,16 +17,6 @@ namespace Graphs.LeastSquares
 
         public LeastSquaresArea() { }
 
-        public LeastSquaresArea(double abCount, double aSquared, double bSquared, double aCount, double bCount, double constant)
-        {
-            this.aSquared = aSquared;
-            this.bSquared = bSquared;
-            this.aCount = aCount;
-            this.bCount = bCount;
-            this.abCount = abCount;
-            this.constant = constant;
-        }
-
         public LeastSquaresDerivative GetLeastSquaresDerivativeForA()
         {
             return new(aSquared * 2, abCount, aCount);

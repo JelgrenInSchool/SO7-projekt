@@ -2,7 +2,7 @@
 
 namespace Graphs.Lines
 {
-    internal class LinearRegression
+    public static class LinearRegression
     {
         public static LinearLine RegressionFromPoints(Point2D[] points)
         {
