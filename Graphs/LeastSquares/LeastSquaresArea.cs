@@ -35,31 +35,26 @@ namespace Graphs.LeastSquares
 
         public static LeastSquaresArea operator +(LeastSquaresArea d, Point2D p)
         {
-            LeastSquaresArea d2 = new()
-            {
-                aSquared = p.X * p.X,
-                bSquared = 1,
-                aCount = 2 * p.X * -p.Y,
-                bCount = 2 * -p.Y,
-                abCount = 2 * p.X,
-                constant = p.Y * p.Y
-            };
+            d.aSquared += p.X * p.X;
+            d.bSquared += 1;
+            d.aCount += 2 * p.X * -p.Y;
+            d.bCount += 2 * -p.Y;
+            d.abCount += 2 * p.X;
+            d.constant += p.Y * p.Y;
 
-            return d + d2;
+            return d;
         }
 
         public static LeastSquaresArea operator +(LeastSquaresArea d, LeastSquaresArea d2)
         {
-            LeastSquaresArea f = new()
-            {
-                aSquared = d.aSquared + d2.aSquared,
-                bSquared = d.bSquared + d2.bSquared,
-                aCount = d.aCount + d2.aCount,
-                bCount = d.bCount + d2.bCount,
-                abCount = d.abCount + d2.abCount,
-                constant = d.constant + d2.constant
-            };
-            return f;
+            d.aSquared += d2.aSquared;
+            d.bSquared += d2.bSquared;
+            d.aCount += d2.aCount;
+            d.bCount += d2.bCount;
+            d.abCount += d2.abCount;
+            d.constant += d2.constant;
+
+            return d;
         }
     }
 }
