@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Graphs.LeastSquares
+﻿namespace Graphs.LeastSquares
 {
     public class LeastSquaresArea
     {
@@ -33,16 +27,16 @@ namespace Graphs.LeastSquares
             return area;
         }
 
-        public static LeastSquaresArea operator +(LeastSquaresArea d, Point2D p)
+        public static LeastSquaresArea operator +(LeastSquaresArea lh, Point2D p)
         {
-            d.aSquared += p.X * p.X;
-            d.bSquared += 1;
-            d.aCount += 2 * p.X * -p.Y;
-            d.bCount += 2 * -p.Y;
-            d.abCount += 2 * p.X;
-            d.constant += p.Y * p.Y;
+            lh.aSquared += p.X * p.X;
+            lh.bSquared += 1;
+            lh.aCount += 2 * p.X * -p.Y;
+            lh.bCount += 2 * -p.Y;
+            lh.abCount += 2 * p.X;
+            lh.constant += p.Y * p.Y;
 
-            return d;
+            return lh;
         }
 
         public static LeastSquaresArea operator +(LeastSquaresArea d, LeastSquaresArea d2)
