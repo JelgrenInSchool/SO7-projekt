@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphs", "Graphs\Graphs.csproj", "{ED071E22-86A8-4B7C-9349-EB636F4E99C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodeTest", "MetodeTest\MetodeTest.csproj", "{922A2A73-FB86-4D42-8168-AB25D38ECAE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetodeTest", "MetodeTest\MetodeTest.csproj", "{922A2A73-FB86-4D42-8168-AB25D38ECAE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphsTests", "GraphsTests\GraphsTests.csproj", "{28206055-B9BA-49C8-A510-9EF6FC560FCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{922A2A73-FB86-4D42-8168-AB25D38ECAE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{922A2A73-FB86-4D42-8168-AB25D38ECAE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{922A2A73-FB86-4D42-8168-AB25D38ECAE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28206055-B9BA-49C8-A510-9EF6FC560FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28206055-B9BA-49C8-A510-9EF6FC560FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28206055-B9BA-49C8-A510-9EF6FC560FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28206055-B9BA-49C8-A510-9EF6FC560FCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
